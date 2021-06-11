@@ -7,6 +7,7 @@ const Login = () => {
   const [emailInput, setEmailInput] = React.useState('');
   const [passwordInput, setPasswordInput] = React.useState('');
   const [login, setLogin] = React.useState(false);
+  const btn = document.querySelector('.btn-login');
 
   const dispatch = useDispatch();
 
@@ -20,28 +21,41 @@ const Login = () => {
   const minLength = 6;
   const checkPass = () => passwordInput.length >= minLength;
 
+
+  const setStyle = () => {
+    if(checkEmail() && checkPass()){
+      btn.style.cursor = 'pointer';
+    }
+  }
+  setStyle();
+
   const handleClick = () => {
     setLogin(true);
   };
 
   return (
-    <div>
+    <div className="login-container">
+      <div className="login-title">dev<span className="wall">Wall</span></div>
+      <div className="coins-container" ><i class="fas fa-coins"></i></div>
       <input
         name="email"
         type="email"
         data-testid="email-input"
+        placeholder="Email"
         value={ emailInput }
         onChange={ (e) => setEmailInput(e.target.value) }
-      />
+      /><br/>
       <input
         name="password"
         type="password"
         data-testid="password-input"
         minLength="6"
+        placeholder="Senha"
         onChange={ (e) => setPasswordInput(e.target.value) }
-      />
+      /><br/>
       <button
         type="button"
+        className="btn-login"
         onClick={ handleClick }
         disabled={ !(checkEmail() && checkPass()) }
       >

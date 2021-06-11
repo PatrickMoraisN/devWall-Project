@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error-container {
+  color: rgb(207, 56, 56);
+  font-size: 15rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.not-found {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-container {
+  font-size: 2rem;
+  color: rgb(39, 39, 39);
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background: linear-gradient(rgb(246, 246, 246), rgb(224, 224, 224));
+  height: 45rem;
+  width: 30rem;
+  box-shadow: 0 0 10px rgb(87, 87, 87);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container input {
+  width: 75%;
+  height: 2rem;
+  background: rgba(224, 224, 224, 0.616);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  border-bottom: 3px solid rgba(131, 131, 131, 0.527);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  color: rgb(1, 155, 1);
+  font-size: 1.4rem;
+}
+
+.login-container input:focus {
+  border-bottom: 3px solid rgb(71, 141, 71);
+}
+
+.login-container input:focus::placeholder {
+ 
+  color: rgb(71, 141, 71);
+}
+
+.btn-login {
+  width: 50%;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: not-allowed;
+  background: linear-gradient(rgb(141, 182, 141), rgb(94, 119, 94));
+}
+
+.btn-login:hover {
+
+  border-radius: 10px;
+  border: 3px solid rgb(56, 56, 56);
+  color: rgb(44, 44, 44);
+  background: linear-gradient(rgba(141, 182, 141, 0.466), rgba(94, 119, 94, 0.445));
+}
+
+.login-title, .coins-container{
+  margin-bottom: 5rem;
+  font-size: 5rem;
+}
+
+.wall {
+  color: limegreen;
+}
+
+.coins-container {
+  animation: ping 1s infinite;
+  color: rgb(228, 200, 42);
+}
+
+@keyframes ping {
+  0% {
+    transform: translateY(6px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(6px);
   }
 }
