@@ -1,9 +1,31 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import headers from './headers';
 
 const Table = ({ expenses, loading }) => {
+  const dispatch = useDispatch();
+
+  const deleteAll = () => {
+    dispatch({
+      type: 'RESET_EXPENSES',
+    });
+  }
+  const newTotal = (totalTarg) => {
+    dispatch({
+      type: 'NEW_TOTAL',
+      payload: { total: +(totalTarg)}
+    });
+  }
+
+  const deleteContent = ({ target }) => {
+    const expTarg = target.parentNode.parentNode;
+    expTarg.remove();
+    newTotal(expTarg.getAttribute('data-total'))
+  }
+
   if (!loading) {
+    console.log(expenses)
     return (
       <table>
         <thead>
@@ -11,11 +33,12 @@ const Table = ({ expenses, loading }) => {
             { headers.map((th) => (
               <th key={ th }>{ th }</th>
             )) }
+            <th><button onClick={ deleteAll }>Apagar tudo</button></th>
           </tr>
         </thead>
         <tbody>
-          { expenses.map((exp, index) => (
-            <tr key={ index }>
+          { expenses.map((exp) => (
+            <tr key={ exp.description } data-id={ exp.description } data-total={ parseFloat(exp.value).toFixed(2) }>
               <td>{ exp.description }</td>
               <td>{ exp.tag }</td>
               <td>{ exp.method }</td>
@@ -27,13 +50,7 @@ const Table = ({ expenses, loading }) => {
               <td>
                 <button
                   type="button"
-                  data-testid="edit-btn"
-                >
-                  Editar
-                </button>
-                <button
-                  type="button"
-                  data-testid="delete-btn"
+                  onClick={(e) => deleteContent(e) }
                 >
                   Excluir
                 </button>

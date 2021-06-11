@@ -15,6 +15,10 @@ export default function wallet(state = initialState, action) {
       total: state.total + action.payload.total,
       loading: action.payload.loading,
     };
+    case 'RESET_EXPENSES':
+      return initialState;
+    case 'NEW_TOTAL':
+      return { ...state, total: Math.abs(state.total - action.payload.total)}
   default:
     return state;
   }
