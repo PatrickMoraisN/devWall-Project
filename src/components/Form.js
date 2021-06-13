@@ -54,7 +54,7 @@ const Form = () => {
       <Select label="Moeda" options={ coins } vid="moeda" />
       <Select label="Método de pagamento" options={ pagamento } vid="pagamento" />
       <Select options={ tag } label="Tag" vid="tag" />
-      <button type="button" onClick={ handleClick }>Adicionar despesa</button>
+      <button type="button" onClick={ handleClick } className="btn-add">Adicionar despesa</button>
     </form>
   );
 };

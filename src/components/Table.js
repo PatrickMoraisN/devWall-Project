@@ -33,12 +33,12 @@ const Table = ({ expenses, loading }) => {
             { headers.map((th) => (
               <th key={ th }>{ th }</th>
             )) }
-            <th><button onClick={ deleteAll }>Apagar tudo</button></th>
+            <th><button onClick={ deleteAll } className="delete-all">Apagar tudo</button></th>
           </tr>
         </thead>
         <tbody>
           { expenses.map((exp) => (
-            <tr key={ exp.description } data-id={ exp.description } data-total={ parseFloat(exp.value).toFixed(2) }>
+            <tr key={ exp.description } data-id={ exp.description } data-total={ parseFloat(exp.value).toFixed(2) } className="exp">
               <td>{ exp.description }</td>
               <td>{ exp.tag }</td>
               <td>{ exp.method }</td>
@@ -51,6 +51,7 @@ const Table = ({ expenses, loading }) => {
                 <button
                   type="button"
                   onClick={(e) => deleteContent(e) }
+                  className="delete"
                 >
                   Excluir
                 </button>
@@ -61,7 +62,7 @@ const Table = ({ expenses, loading }) => {
       </table>
     );
   }
-  return (<p>Adicione uma nova despesa!</p>);
+  return (<p className="new-exp">Adicione uma nova despesa :)</p>);
 };
 
 export default Table;
