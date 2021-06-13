@@ -2,6 +2,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Footer from '../components/Footer';
 
 const Login = () => {
   const [emailInput, setEmailInput] = React.useState('');
@@ -43,6 +44,7 @@ const Login = () => {
         data-testid="email-input"
         placeholder="Email"
         value={ emailInput }
+        autoComplete="none"
         onChange={ (e) => setEmailInput(e.target.value) }
       /><br/>
       <input
@@ -61,6 +63,7 @@ const Login = () => {
       >
         Entrar
       </button>
+      <Footer />
       {login && <Redirect to="/carteira" />}
     </div>
   );

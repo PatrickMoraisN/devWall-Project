@@ -48,9 +48,9 @@ const Form = () => {
     requisicaoFetch();
   }, []);
   return (
-    <form>
-      <Label label="Valor" type="number" vid="valor" />
-      <Label label="Descrição" type="text" vid="descricao" />
+    <form autoComplete="none">
+      <Label label="Valor" type="number" vid="valor" autoComplete="none"/>
+      <Label label="Descrição" type="text" vid="descricao" autoComplete="none"/>
       <Select label="Moeda" options={ coins } vid="moeda" />
       <Select label="Método de pagamento" options={ pagamento } vid="pagamento" />
       <Select options={ tag } label="Tag" vid="tag" />

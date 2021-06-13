@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Label = ({ label, type, vid }) => (
-  <label htmlFor={ vid }>
+  <label htmlFor={ vid } autoComplete="none">
     {label}
     :
-    <input type={ type } name={ vid } id={ vid } />
+    <input type={ type } name={ vid } id={ vid } autoComplete="none"/>
   </label>
 );
 
