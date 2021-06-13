@@ -10,7 +10,7 @@ function App() {
     <Switch>
       <Route exact path="/" component={ Login } />
       <Route path="/carteira" component={ Wallet } />
-      <Route component={ NotFound } />
+      <Route path ="*" component={ NotFound } />
     </Switch>
   );
 }
