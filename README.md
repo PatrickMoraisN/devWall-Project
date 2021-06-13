@@ -20,7 +20,7 @@
 
 ---
 # :monocle_face: About
-This project was developed with the intention of being a currency conversion wallet using an API.
+This project was proposed by Trybe, it was developed with the intention of being a currency conversion wallet using an API. 
 <br />
 
 ---
