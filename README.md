@@ -5,7 +5,7 @@
 - [Project Media](#camera_flash-project-media)
 - [About](#monocle_face-about)
 - [Technologies](#rocket-technologies)
-- [Autor](#closed_book-author)
+- [Author](#closed_book-author)
 <br />
 
 ---
