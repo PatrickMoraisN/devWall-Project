@@ -10,11 +10,11 @@ const Wallet = () => {
   const expenses = useSelector((state) => state.wallet.expenses);
   const loading = useSelector((state) => state.wallet.loading);
   return (
-    <>
+    <div className="wallet-page">
       <Header email={ email } total={ total } />
       <Form />
       <Table expenses={ expenses } loading={ loading } />
-    </>);
+    </div>);
 };
 
 export default Wallet;

@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body, #root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .error-container {
   color: rgb(207, 56, 56);
   font-size: 15rem;
@@ -22,14 +31,6 @@
   font-size: 2rem;
   color: rgb(39, 39, 39);
   text-align: center;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .login-container {
@@ -58,15 +59,14 @@ body {
 }
 
 .login-container input:focus {
-  border-bottom: 3px solid rgb(71, 141, 71);
+  border-bottom: 3px solid rgb(94, 119, 94);
 }
 
 .login-container input:focus::placeholder {
- 
-  color: rgb(71, 141, 71);
+  color: rgb(32, 131, 32);
 }
 
-.btn-login {
+.btn-login:disabled {
   width: 50%;
   height: 3rem;
   font-size: 1.5rem;
@@ -76,7 +76,17 @@ body {
   background: linear-gradient(rgb(141, 182, 141), rgb(94, 119, 94));
 }
 
-.btn-login:hover {
+.btn-login:enabled {
+  background: linear-gradient(rgb(101, 184, 101), rgb(68, 116, 68));
+  width: 50%;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: not-allowed;
+}
+
+.btn-login:enabled:hover {
 
   border-radius: 10px;
   border: 3px solid rgb(56, 56, 56);
@@ -87,6 +97,10 @@ body {
 .login-title, .coins-container{
   margin-bottom: 5rem;
   font-size: 5rem;
+}
+
+.login-title {
+  color: rgb(65, 65, 65);
 }
 
 .wall {
@@ -108,4 +122,63 @@ body {
   100% {
     transform: translateY(6px);
   }
+}
+
+.wallet-page {
+  height: 100vh;
+  width: 100%;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background: linear-gradient(rgb(204, 204, 204), rgb(161, 161, 161));
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+}
+
+form {
+  background: linear-gradient(rgba(101, 187, 101, 0.849), rgba(31, 114, 31, 0.876));
+  width: 100%;
+  height: 70px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input, form select {
+  border-radius: 8px;
+  overflow: 0;
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin: 0 15px;
+  background: rgba(222, 236, 222, 0.849);
+}
+
+
+
+.total-field {
+  background-color: rgb(148, 148, 148);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.header-title {
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
+  font-size: 3rem;
 }

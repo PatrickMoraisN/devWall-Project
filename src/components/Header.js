@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 const Header = ({ email, total = 0 }) => (
   <header className="header">
-    <div>Trybe-Wallet</div>
-    <div>
+    <div className="login-title header-title">dev<span className="wall">Wall</span></div>
+    <div className="info">
       <span data-testid="email-field">
         {email}
       </span>
-      <div>
+      <div className="total-field">
         Despesa Total: R$
         <span data-testid="total-field">{total.toFixed(2)}</span>
       </div>
