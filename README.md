@@ -10,11 +10,11 @@
 
 ---
 # :camera_flash: Project Media
-![Imagem do projeto](src/assets/gif.gif)
-![Imagem do projeto](src/assets/1.png)
-![Imagem do projeto](src/assets/2.png)
-![Imagem do projeto](src/assets/3.png)
-![Imagem do projeto](src/assets/4.png)
+![Imagem do projeto](src/assets/gif.gif)<br /><br />
+<img src="src/assets/1.png" width="350px"/><br /><br />
+<img src="src/assets/2.png" width="350px"/><br /><br />
+<img src="src/assets/3.png" width="350px"/><br /><br />
+<img src="src/assets/4.png" width="350px"/><br /><br />
 
 <br />
 
