@@ -1,7 +1,7 @@
 {
   "name": "wallet",
   "version": "0.1.0",
-  "homepage": "./build",
+  "homepage": "https://patrickmoraisn.github.io/devWall-Project/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
