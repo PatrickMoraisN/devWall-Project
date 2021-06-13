@@ -7,9 +7,9 @@ const NotFound = () => (
     </div>
     <div className="text-container">
       <h1>
-        Sorry =(
+        Desculpe =(
         <br />
-        Page not found!
+        Página não encontrada!
       </h1>
     </div>
   </div>
